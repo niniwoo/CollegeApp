@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4CAC8"
+    android:paddingHorizontal="20dp"
+    tools:context=".ControlPanel">
+
+    <TextView
+        android:id="@+id/txtAdminCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/act_controlPanel_txtAdminCP"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnPostAdmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPostAdmin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#6C815B"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:onClick="enterAdminPostPanel"
+        android:text="@string/act_controlPanel_btnPostAdmin"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnUserAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdminCP" />
+
+    <Button
+        android:id="@+id/btnUserAdmin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#6C815B"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:onClick="enterAdminControlUserPanel"
+        android:text="@string/act_controlPanel_btnUserAdmin"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPostAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdminCP" />
+
+    <Button
+        android:id="@+id/txtPosts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:text="@string/posts"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:onClick="checkPosts"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserAdmin" />
+
+    <Button
+        android:id="@+id/txtLogout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:text="@string/act_controlPanel_txtLogOut"
+        android:onClick="logout"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPosts"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserAdmin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
